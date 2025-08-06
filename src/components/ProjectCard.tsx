@@ -22,13 +22,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
-  const cardClasses = variant === 'featured' 
-    ? 'project-card hover-glow group' 
+  const cardClasses = variant === 'featured'
+    ? 'project-card hover-glow group'
     : 'project-card group';
 
   return (
     <article className={cardClasses}>
-      {/* Project Image */}
       <div className="relative mb-6 overflow-hidden rounded-lg bg-muted">
         <img
           src={project.image}
@@ -36,147 +35,60 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
-        
-        {/* Overlay with Action Buttons */}
         <div className="absolute inset-0 bg-primary-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
           {project.liveUrl && (
-            <Button
-              size="sm"
-              variant="outline"
-              className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-              asChild
-            >
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View ${project.title} live demo`}
-              >
+            <Button size="sm" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} live demo`}>
                 <Eye className="w-4 h-4 mr-2" />
                 Live Demo
               </a>
             </Button>
           )}
-          
-          {project.githubUrl && (
-            <Button
-              size="sm"
-              variant="outline"
-              className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-              asChild
-            >
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View ${project.title} source code`}
-              >
-                <Github className="w-4 h-4 mr-2" />
-                Code
-              </a>
-            </Button>
-          )}
         </div>
-
-        {/* Category Badge */}
         <div className="absolute top-3 left-3">
           <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
             {project.category}
           </Badge>
         </div>
-
-        {/* Featured Badge */}
         {project.featured && (
           <div className="absolute top-3 right-3">
-            <Badge className="bg-accent-primary text-white">
-              Featured
-            </Badge>
+            <Badge className="bg-accent-primary text-white">Featured</Badge>
           </div>
         )}
       </div>
-
-      {/* Project Content */}
       <div className="space-y-4">
-        {/* Header */}
         <div className="flex items-start justify-between gap-4">
           <div>
             <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-200">
               {project.title}
             </h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              {project.year}
-            </p>
+            <p className="text-sm text-muted-foreground mt-1">{project.year}</p>
           </div>
-          
-          {/* Quick Action Links */}
           <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label={`View ${project.title} live demo`}
-              >
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200" aria-label={`View ${project.title} live demo`}>
                 <ExternalLink className="w-4 h-4" />
-              </a>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label={`View ${project.title} source code`}
-              >
-                <Github className="w-4 h-4" />
               </a>
             )}
           </div>
         </div>
-
-        {/* Description */}
         <p className="text-muted-foreground leading-relaxed">
           {variant === 'featured' ? project.longDescription || project.description : project.description}
         </p>
-
-        {/* Technologies */}
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="tech-tag"
-              role="listitem"
-            >
+            <span key={index} className="tech-tag">
               {tech}
             </span>
           ))}
         </div>
-
-        {/* Action Buttons for Featured Projects */}
         {variant === 'featured' && (
           <div className="flex gap-3 pt-4">
             {project.liveUrl && (
               <Button variant="default" size="sm" asChild>
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Live
-                </a>
-              </Button>
-            )}
-            {project.githubUrl && (
-              <Button variant="outline" size="sm" asChild>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
                 </a>
               </Button>
             )}
@@ -186,5 +98,53 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
     </article>
   );
 };
+
+// Example projects array
+export const projects: Project[] = [
+  {
+    id: 'energy-invoice-automation',
+    title: 'Energy Invoice Automation',
+    description: 'Automated download and processing of energy invoices.',
+    longDescription: 'Built with Python, Selenium, and PostgreSQL to ingest, parse, and store invoice data, reducing manual effort by 80%.',
+    image: '/assets/projects/invoice-automation.png',
+    technologies: ['Python', 'Selenium', 'PostgreSQL', 'Docker'],
+    category: 'Automation',
+    githubUrl: 'https://github.com/arthurgranja/energy-invoice-automation',
+    featured: true,
+    year: '2024'
+  },
+  {
+    id: 'nerdo-rag-platform',
+    title: 'Nerd-o RAG Platform',
+    description: 'Retrieval-Augmented Generation tutoring system.',
+    longDescription: 'Engineered multi-agent AI tutor using LangChain, OpenAI embeddings, and PGVector, deployed via FastAPI and Docker.',
+    image: '/assets/projects/nerdo-rag.png',
+    technologies: ['LangChain', 'OpenAI', 'PGVector', 'FastAPI'],
+    category: 'AI',
+    githubUrl: 'https://github.com/arthurgranja/nerdo-rag-platform',
+    featured: true,
+    year: '2025'
+  },
+  {
+    id: 'pixel-art-generator',
+    title: 'Pixel Art Generator',
+    description: 'AI-powered pixel art for D&D characters.',
+    longDescription: 'Developed image-generation pipelines and prompt engineering workflows to produce high-resolution vertical pixel art.',
+    image: '/assets/projects/pixel-art-generator.png',
+    technologies: ['Image Generation', 'TypeScript', 'React'],
+    category: 'Creative',
+    year: '2024'
+  },
+  {
+    id: 'connect-app',
+    title: 'Connect Mobile App',
+    description: 'Proximity-based social networking application.',
+    longDescription: 'Built with React Native frontend and Django backend integrating maps and chat for professional networking.',
+    image: '/assets/projects/connect-app.png',
+    technologies: ['React Native', 'Django', 'PostgreSQL'],
+    category: 'Mobile',
+    year: '2025'
+  }
+];
 
 export default ProjectCard;

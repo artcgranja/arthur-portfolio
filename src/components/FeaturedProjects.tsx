@@ -1,48 +1,42 @@
-import ProjectCard, { Project } from './ProjectCard';
-import project1Image from '@/assets/project-1.jpg';
-import project2Image from '@/assets/project-2.jpg';
-import project3Image from '@/assets/project-3.jpg';
+import ProjectCard, { Project, projects } from './ProjectCard';
 
 const FeaturedProjects = () => {
+  // Projetos específicos para o layout
   const featuredProjects: Project[] = [
     {
-      id: '1',
-      title: 'EcoMetrics Dashboard',
-      description: 'Real-time sustainability tracking platform for enterprises',
-      longDescription: 'A comprehensive analytics dashboard that helps companies track their environmental impact in real-time. Features interactive charts, automated reporting, and AI-powered insights for carbon footprint optimization.',
-      image: project1Image,
-      technologies: ['React', 'TypeScript', 'D3.js', 'Node.js', 'PostgreSQL', 'AWS'],
-      category: 'Web Application',
-      liveUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com',
+      id: 'energy-invoice-automation',
+      title: 'Energy Invoice Automation',
+      description: 'AI-powered workflow for extracting and structuring energy invoice data from any format.',
+      longDescription: 'Developed an AI-based automation workflow using LangChain and LLMs to extract and structure energy invoice data from any format (PDF, image, or text). The system performs semantic interpretation of documents, automatically identifying fields like total value, consumption, dates, and tax information, even with varied layouts. Extracted data is organized into a structured pipeline ready for analysis, dashboard visualization, and internal system integration. This approach eliminated the need for fixed rules or traditional OCR, making the process more robust, scalable, and adaptable to new distributors and formats.',
+      image: '/assets/projects/invoice-automation.png',
+      technologies: ['Python', 'LangChain', 'LLMs', 'PostgreSQL', 'Docker'],
+      category: 'Automation',
+      githubUrl: 'https://github.com/arthurgranja/energy-invoice-automation',
       featured: true,
-      year: '2024'
+      year: '2025'
     },
     {
-      id: '2',
-      title: 'ShopFlow Mobile',
-      description: 'Next-generation e-commerce mobile application',
-      longDescription: 'A modern mobile commerce solution built with React Native, featuring AI-powered product recommendations, seamless payment integration, and advanced inventory management.',
-      image: project2Image,
-      technologies: ['React Native', 'Redux', 'Node.js', 'Stripe API', 'MongoDB'],
-      category: 'Mobile App',
-      liveUrl: 'https://apps.apple.com/app/shopflow',
-      githubUrl: 'https://github.com',
+      id: 'nerdo-rag-platform',
+      title: 'Nerd-o Educational AI',
+      description: 'Educational SaaS with integrated AI, personalized, secure and connected to school curriculum.',
+      longDescription: 'A comprehensive educational SaaS platform featuring integrated AI that acts as a personalized tutor for students and assistant for teachers. Built with multi-agent system architecture and RAG technology for curriculum-aligned responses.',
+      image: '/assets/projects/nerdo-rag.png',
+      technologies: ['Python', 'TypeScript', 'Multi Agent', 'FastAPI', 'Next.js', 'PGVector'],
+      category: 'AI',
+      liveUrl: 'https://www.nerd-o.com',
       featured: true,
-      year: '2024'
+      year: '2025'
     },
     {
-      id: '3',
-      title: 'DevDocs API',
-      description: 'Developer documentation platform with interactive examples',
-      longDescription: 'An intelligent documentation platform that automatically generates interactive API documentation with live code examples, testing environments, and comprehensive SDK generation.',
-      image: project3Image,
-      technologies: ['Next.js', 'MDX', 'Prisma', 'OpenAPI', 'Docker'],
-      category: 'Developer Tools',
-      liveUrl: 'https://devdocs.example.com',
-      githubUrl: 'https://github.com',
+      id: 'placeholder-project',
+      title: 'Coming Soon',
+      description: 'New exciting project in development.',
+      longDescription: 'A new innovative project is currently in development. Stay tuned for updates!',
+      image: '/assets/projects/placeholder.png',
+      technologies: ['React', 'TypeScript', 'AI'],
+      category: 'Development',
       featured: true,
-      year: '2023'
+      year: '2025'
     }
   ];
 
@@ -60,17 +54,22 @@ const FeaturedProjects = () => {
           </p>
         </div>
 
-        {/* Featured Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {featuredProjects.map((project, index) => (
-            <div 
-              key={project.id}
-              className="animate-slide-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <ProjectCard project={project} variant="featured" />
-            </div>
-          ))}
+        {/* Featured Projects Grid - Layout específico */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Energy Invoice Automation - Canto esquerdo */}
+          <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <ProjectCard project={featuredProjects[0]} variant="default" />
+          </div>
+          
+          {/* Nerd-o RAG Platform - Centro (maior) */}
+          <div className="animate-slide-up lg:col-span-1" style={{ animationDelay: '0.2s' }}>
+            <ProjectCard project={featuredProjects[1]} variant="featured" />
+          </div>
+          
+          {/* Placeholder - Canto direito */}
+          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <ProjectCard project={featuredProjects[2]} variant="default" />
+          </div>
         </div>
       </div>
     </section>
