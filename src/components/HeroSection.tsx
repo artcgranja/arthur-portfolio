@@ -1,8 +1,18 @@
 import { ArrowRight, Download, Code, GitBranch } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+  // Função para scroll suave
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <section 
       id="home" 
@@ -42,16 +52,15 @@ const HeroSection = () => {
                 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
-                  <Link to="/projects">
-                    <Button 
-                      size="lg"
-                      className="bg-accent-primary text-white hover:bg-accent-primary/90 group px-8 py-4 text-lg font-semibold"
-                    >
-                      <Code className="mr-2 h-5 w-5" />
-                      View Projects
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    size="lg"
+                    className="bg-accent-primary text-white hover:bg-accent-primary/90 group px-8 py-4 text-lg font-semibold"
+                    onClick={() => smoothScrollTo('featured-projects')}
+                  >
+                    <Code className="mr-2 h-5 w-5" />
+                    View Projects
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </Button>
                   
                   <Button 
                     variant="outline" 

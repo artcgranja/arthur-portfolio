@@ -1,6 +1,3 @@
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import ProjectCard, { Project } from './ProjectCard';
 import project1Image from '@/assets/project-1.jpg';
 import project2Image from '@/assets/project-2.jpg';
@@ -64,7 +61,7 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <div 
               key={project.id}
@@ -74,21 +71,6 @@ const FeaturedProjects = () => {
               <ProjectCard project={project} variant="featured" />
             </div>
           ))}
-        </div>
-
-        {/* View All Projects CTA */}
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="group px-8 py-4 text-lg hover-lift"
-            asChild
-          >
-            <Link to="/projects">
-              View All Projects
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

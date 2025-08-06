@@ -12,7 +12,7 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
 
   const navItems = [
     { id: 'home', label: 'Home', href: '/', isRoute: true },
-    { id: 'projects', label: 'Projects', href: '/projects', isRoute: true },
+    { id: 'featured-projects', label: 'Projects', href: '#featured-projects', isRoute: false },
     { id: 'about', label: 'About', href: '#about', isRoute: false },
     { id: 'contact', label: 'Contact', href: '#contact', isRoute: false },
   ];
@@ -22,6 +22,25 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
     { icon: LinkedinIcon, href: 'https://www.linkedin.com/in/arthur-granja-2b5070208', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:artcgranja@gmail.com', label: 'Email' },
   ];
+
+  // Função para scroll suave
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  // Função para lidar com cliques em links
+  const handleLinkClick = (href: string, isRoute: boolean) => {
+    if (!isRoute) {
+      const elementId = href.replace('#', '');
+      smoothScrollTo(elementId);
+    }
+  };
 
   return (
     <>
@@ -39,6 +58,10 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
                 href="#home" 
                 className="text-xl font-bold text-gradient hover:scale-105 transition-transform duration-200"
                 aria-label="Home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScrollTo('home');
+                }}
               >
                 Portfolio
               </a>
@@ -65,6 +88,10 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
                       className={`nav-link px-3 py-2 rounded-md text-sm font-medium ${
                         activeSection === item.id ? 'active' : ''
                       }`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick(item.href, item.isRoute);
+                      }}
                     >
                       {item.label}
                     </a>
@@ -131,7 +158,11 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
                       className={`nav-link block px-3 py-2 rounded-md text-base font-medium ${
                         activeSection === item.id ? 'active' : ''
                       }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick(item.href, item.isRoute);
+                        setIsMobileMenuOpen(false);
+                      }}
                     >
                       {item.label}
                     </a>

@@ -4,13 +4,14 @@ import HeroSection from '@/components/HeroSection';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import SkillsSection from '@/components/SkillsSection';
 import AboutSection from '@/components/AboutSection';
+import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'featured-projects', 'skills', 'about'];
+      const sections = ['home', 'featured-projects', 'skills', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -18,7 +19,7 @@ const Index = () => {
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section === 'featured-projects' ? 'projects' : section);
+            setActiveSection(section);
             break;
           }
         }
@@ -38,6 +39,7 @@ const Index = () => {
         <FeaturedProjects />
         <SkillsSection />
         <AboutSection />
+        <ContactSection />
       </main>
     </div>
   );

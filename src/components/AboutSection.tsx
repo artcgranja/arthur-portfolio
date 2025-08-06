@@ -176,20 +176,6 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="project-card max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Start a Project?</h3>
-            <p className="text-muted-foreground mb-6">
-              I'm always excited to work on new challenges and bring ideas to life. Let's discuss how we can work together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">Start a Conversation</Button>
-              <Button variant="outline" size="lg">View My Resume</Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
