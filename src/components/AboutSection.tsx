@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 const AboutSection = () => {
   const experiences = [
     {
-      year: '2025 - Present',
+      year: '2025',
       title: 'Founder & AI Research Developer',
       company: 'Nerd-o',
       description: 'Leading design and implementation of RAG-based platforms and AI-driven educational tools',
