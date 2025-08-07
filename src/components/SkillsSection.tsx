@@ -7,8 +7,8 @@ const SkillsSection = () => {
       title: 'Research & Innovation',
       description: 'Exploring emerging technologies and advanced AI methodologies',
       skills: ['LLM Applications', 'AI Architecture', 'Software Engineering', 'Technology Research', 'Innovation Strategies', 'AI Ethics & Safety'],
-      color: 'text-red-500',
-      bgColor: 'bg-red-500/10'
+      color: 'text-primary',
+      bgColor: 'bg-primary/10'
     },
     {
       icon: Code,
@@ -23,8 +23,8 @@ const SkillsSection = () => {
       title: 'Backend Development',
       description: 'Building robust, efficient, and scalable backend services',
       skills: ['Python', 'FastAPI', 'Flask', 'Django', 'REST APIs', 'Microservices', 'Docker'],
-      color: 'text-green-500',
-      bgColor: 'bg-green-500/10'
+      color: 'text-primary',
+      bgColor: 'bg-primary/10'
     },
     {
       icon: Cloud,
@@ -39,16 +39,16 @@ const SkillsSection = () => {
       title: 'Database & Infrastructure',
       description: 'Designing and managing scalable data solutions',
       skills: ['SQL', 'NoSQL', 'Vector Databases', 'PgVector', 'Cloud Infrastructure', 'Git & CI/CD'],
-      color: 'text-yellow-500',
-      bgColor: 'bg-yellow-500/10'
+      color: 'text-primary',
+      bgColor: 'bg-primary/10'
     },
     {
       icon: Monitor,
       title: 'Web Development',
       description: 'Creating intuitive and integrated web solutions',
       skills: ['TypeScript', 'JavaScript', 'React.js', 'System Integration', 'API Integration', 'Java'],
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-500/10'
+      color: 'text-primary',
+      bgColor: 'bg-primary/10'
     }
   ];
 
@@ -101,7 +101,7 @@ const SkillsSection = () => {
                       {category.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="tech-tag text-xs"
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border border-border text-muted-foreground transition-all duration-200 ease-out hover:text-primary hover:border-primary"
                           style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
                         >
                           {skill}
