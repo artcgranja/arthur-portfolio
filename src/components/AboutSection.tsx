@@ -56,7 +56,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
-            Software engineer specializing in AI solutions, from RAG systems to scalable APIs.
+            Software engineer specializing in AI solutions, from agents systems to scalable APIs.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ const AboutSection = () => {
               {/* Personal Description */}
               <div className="space-y-4 text-muted-foreground font-body">
                 <p>
-                  Technology professional focused on designing and implementing AI-driven systems. Skilled in Python, TypeScript, and modern frameworks for building RAG workflows and scalable services.
+                  Technology professional focused on designing and implementing AI-driven systems. Skilled in Python, TypeScript, and modern frameworks for building LLMs workflows and scalable services.
                 </p>
                 
                 <p>
