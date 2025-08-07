@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
       title: 'Energy Invoice Automation',
       description: 'Developed an AI-based automation workflow using LangChain and LLMs to extract and structure energy invoice data from any format. The system performs semantic interpretation of documents and the extracted data is organized into a structured pipeline ready for analysis.',
       longDescription: 'Developed an AI-based automation workflow using LangChain and LLMs to extract and structure energy invoice data from any format (PDF, image, or text). The system performs semantic interpretation of documents, automatically identifying fields like total value, consumption, dates, and tax information, even with varied layouts. Extracted data is organized into a structured pipeline ready for analysis, dashboard visualization, and internal system integration. This approach eliminated the need for fixed rules or traditional OCR, making the process more robust, scalable, and adaptable to new distributors and formats.',
-      image: '/assets/projects/invoice-automation.png',
+      image: '/projects/energy-invoice.jpg',
       technologies: ['Python', 'LangChain', 'LLMs', 'PostgreSQL', 'Docker'],
       category: 'Automation',
       githubUrl: 'https://github.com/arthurgranja/energy-invoice-automation',
@@ -20,7 +20,7 @@ const FeaturedProjects = () => {
       title: 'Nerd-o Educational AI',
       description: 'Educational SaaS with integrated AI, personalized, secure and connected to school curriculum.',
       longDescription: 'A comprehensive educational SaaS platform featuring integrated AI that acts as a personalized tutor for students and assistant for teachers. Built with multi-agent system architecture and RAG technology for curriculum-aligned responses.',
-      image: '/assets/projects/nerdo-rag.png',
+      image: '/projects/nerd-o_image.png',
       technologies: ['Python', 'TypeScript', 'Multi Agent', 'FastAPI', 'Next.js', 'PGVector'],
       category: 'AI',
       liveUrl: 'https://www.nerd-o.com',
@@ -32,7 +32,7 @@ const FeaturedProjects = () => {
       title: 'Coming Soon',
       description: 'New exciting project in development.',
       longDescription: 'A new innovative project is currently in development. Stay tuned for updates!',
-      image: '/assets/projects/placeholder.png',
+      image: '/placeholder.svg',
       technologies: ['React', 'TypeScript', 'AI'],
       category: 'Development',
       featured: true,
@@ -45,10 +45,10 @@ const FeaturedProjects = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
             A showcase of my most impactful work, featuring innovative solutions 
             that solve real-world problems with modern technologies.
           </p>

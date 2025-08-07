@@ -11,9 +11,10 @@ const Navigation = ({ activeSection = 'home' }: NavigationProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home', href: '/', isRoute: true },
+    { id: 'home', label: 'Home', href: '#home', isRoute: false },
     { id: 'featured-projects', label: 'Projects', href: '#featured-projects', isRoute: false },
     { id: 'about', label: 'About', href: '#about', isRoute: false },
+    { id: 'skills', label: 'Skills', href: '#skills', isRoute: false },
     { id: 'contact', label: 'Contact', href: '#contact', isRoute: false },
   ];
 

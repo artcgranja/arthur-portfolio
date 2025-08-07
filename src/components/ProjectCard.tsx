@@ -46,7 +46,7 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
           )}
         </div>
         <div className="absolute top-3 left-3">
-          <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
+          <Badge className="bg-purple-500/30 text-purple-100 border-purple-400/50 backdrop-blur-sm">
             {project.category}
           </Badge>
         </div>
@@ -77,7 +77,10 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
         </p>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="tech-tag">
+            <span 
+              key={index} 
+              className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border border-border text-muted-foreground transition-all duration-200 ease-out hover:text-primary hover:border-primary"
+            >
               {tech}
             </span>
           ))}
@@ -106,7 +109,7 @@ export const projects: Project[] = [
     title: 'Energy Invoice Automation',
     description: 'Automated download and processing of energy invoices.',
     longDescription: 'Built with Python, Selenium, and PostgreSQL to ingest, parse, and store invoice data, reducing manual effort by 80%.',
-    image: '/assets/projects/invoice-automation.png',
+    image: '/projects/energy-invoice.jpg',
     technologies: ['Python', 'Selenium', 'PostgreSQL', 'Docker'],
     category: 'Automation',
     githubUrl: 'https://github.com/arthurgranja/energy-invoice-automation',
@@ -118,7 +121,7 @@ export const projects: Project[] = [
     title: 'Nerd-o RAG Platform',
     description: 'Retrieval-Augmented Generation tutoring system.',
     longDescription: 'Engineered multi-agent AI tutor using LangChain, OpenAI embeddings, and PGVector, deployed via FastAPI and Docker.',
-    image: '/assets/projects/nerdo-rag.png',
+    image: '/projects/nerd-o_image.png',
     technologies: ['LangChain', 'OpenAI', 'PGVector', 'FastAPI'],
     category: 'AI',
     githubUrl: 'https://github.com/arthurgranja/nerdo-rag-platform',
@@ -130,7 +133,7 @@ export const projects: Project[] = [
     title: 'Pixel Art Generator',
     description: 'AI-powered pixel art for D&D characters.',
     longDescription: 'Developed image-generation pipelines and prompt engineering workflows to produce high-resolution vertical pixel art.',
-    image: '/assets/projects/pixel-art-generator.png',
+    image: '/placeholder.svg',
     technologies: ['Image Generation', 'TypeScript', 'React'],
     category: 'Creative',
     year: '2024'
@@ -140,7 +143,7 @@ export const projects: Project[] = [
     title: 'Connect Mobile App',
     description: 'Proximity-based social networking application.',
     longDescription: 'Built with React Native frontend and Django backend integrating maps and chat for professional networking.',
-    image: '/assets/projects/connect-app.png',
+    image: '/placeholder.svg',
     technologies: ['React Native', 'Django', 'PostgreSQL'],
     category: 'Mobile',
     year: '2025'

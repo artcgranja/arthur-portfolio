@@ -1,7 +1,6 @@
-import { Calendar, MapPin, Coffee, Heart, Award, Users } from 'lucide-react';
+import { Calendar, MapPin, Coffee, Lightbulb, Award, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import avatarImage from '@/assets/avatar.jpg';
 
 const AboutSection = () => {
   const experiences = [
@@ -43,9 +42,9 @@ const AboutSection = () => {
 
   const interests = [
     { icon: Coffee, label: 'Bouldering & Climbing' },
-    { icon: Heart, label: 'Pixel Art & RPG Design' },
+    { icon: Lightbulb, label: 'AI Research' },
     { icon: Award, label: 'Videogames Enthusiast' },
-    { icon: Users, label: 'AI Research' }
+    { icon: Users, label: 'Indie Dev' }
   ];
 
   return (
@@ -53,10 +52,10 @@ const AboutSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
             Software engineer specializing in AI solutions, from RAG systems to scalable APIs.
           </p>
         </div>
@@ -70,7 +69,7 @@ const AboutSection = () => {
               <div className="flex flex-col items-center text-center mb-8">
                 <div className="relative mb-6">
                   <img
-                    src={avatarImage}
+                    src="/profile/avatar.png"
                     alt="Arthur Granja - AI Research & Development"
                     className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
                   />
@@ -79,8 +78,8 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-foreground mb-2">Arthur Cavalcanti Granja</h3>
-                <p className="text-muted-foreground mb-4">AI Research & Development</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-heading">Arthur Cavalcanti Granja</h3>
+                <p className="text-muted-foreground mb-4 font-body">AI Research & Development</p>
                 
                 <div className="flex flex-wrap gap-2 justify-center mb-6">
                   <Badge variant="secondary" className="flex items-center gap-1">
@@ -95,7 +94,7 @@ const AboutSection = () => {
               </div>
 
               {/* Personal Description */}
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-muted-foreground font-body">
                 <p>
                   Technology professional focused on designing and implementing AI-driven systems. Skilled in Python, TypeScript, and modern frameworks for building RAG workflows and scalable services.
                 </p>
@@ -107,12 +106,12 @@ const AboutSection = () => {
 
               {/* Interests */}
               <div className="mt-8">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Interests & Hobbies</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4 font-heading">Interests & Hobbies</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {interests.map((interest, index) => {
                     const Icon = interest.icon;
                     return (
-                      <div key={index} className="flex items-center gap-2 text-muted-foreground">
+                      <div key={index} className="flex items-center gap-2 text-muted-foreground font-body">
                         <Icon className="w-4 h-4 text-primary" />
                         <span className="text-sm">{interest.label}</span>
                       </div>
@@ -134,7 +133,7 @@ const AboutSection = () => {
           <div className="lg:col-span-7">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-8">Professional Experience</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-8 font-heading">Professional Experience</h3>
               </div>
 
               {/* Timeline */}

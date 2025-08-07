@@ -57,10 +57,10 @@ const SkillsSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
             A comprehensive toolkit for building modern digital experiences, 
             from frontend interfaces to scalable backend systems.
           </p>
@@ -84,17 +84,17 @@ const SkillsSection = () => {
                 {/* Content */}
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <h3 className="text-xl font-semibold text-foreground mb-2 font-heading">
                       {category.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground font-body">
                       {category.description}
                     </p>
                   </div>
 
                   {/* Skills List */}
                   <div className="space-y-3">
-                    <h4 className="text-sm font-medium text-foreground uppercase tracking-wide">
+                    <h4 className="text-sm font-medium text-foreground uppercase tracking-wide font-heading">
                       Skills
                     </h4>
                     <div className="flex flex-wrap gap-2">

@@ -32,21 +32,20 @@ const HeroSection = () => {
                 </div>
                 
                 {/* Name */}
-                <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-slide-up">
+                <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-slide-up font-heading">
                   Arthur <span className="text-primary">Granja</span>
                 </h1>
                 
                 {/* Tagline */}
-                <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed animate-slide-up">
-                  AI Research & Developer com <span className="text-primary font-semibold">3+ anos</span> criando 
-                  agentes inteligentes e fluxos automatizados que transformam dados em insights acionáveis.
+                <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed animate-slide-up font-body">
+                  AI Research & Developer with <span className="text-primary font-semibold">3+ years</span> of experience creating 
+                  intelligent agents and automated workflows that transform data into actionable insights.
                 </h2>
                 
                 {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-3 mb-8 animate-slide-up">
-                  <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">Python</span>
-                  <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">TypeScript</span>
-                  <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">LLMs</span>
+                  <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">AI Systems</span>
+                  <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">Automations</span>
                   <span className="bg-card text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border">Data Engineering</span>
                 </div>
                 

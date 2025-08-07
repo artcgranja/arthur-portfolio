@@ -66,9 +66,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				'heading': ['Inter', 'system-ui', 'sans-serif'],
-				'body': ['Inter', 'system-ui', 'sans-serif'],
-				'mono': ['Fira Code', 'Monaco', 'monospace'],
+				'heading': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+				'body': ['JetBrains Mono', 'system-ui', 'monospace'],
+				'mono': ['JetBrains Mono', 'Monaco', 'monospace'],
 			},
 			fontSize: {
 				'xs': '0.75rem',      // 12px

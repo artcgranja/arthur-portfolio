@@ -30,10 +30,10 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-card">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-heading">
             Let's Work Together
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-body">
             Ready to bring your ideas to life? I'm always excited to work on new challenges and create innovative solutions.
           </p>
         </div>
@@ -42,10 +42,10 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="project-card hover-lift">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-foreground">
+              <CardTitle className="text-2xl font-bold text-foreground font-heading">
                 Send a Message
               </CardTitle>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground font-body">
                 Tell me about your project and I'll get back to you as soon as possible.
               </p>
             </CardHeader>
@@ -108,11 +108,11 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-6 font-heading">
                 Get in Touch
               </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm currently available for freelance work and full-time opportunities. 
+              <p className="text-muted-foreground mb-8 leading-relaxed font-body">
+                I'm currently available for freelance work. 
                 Whether you have a project in mind or just want to chat about AI and technology, 
                 I'd love to hear from you.
               </p>
@@ -147,10 +147,10 @@ const ContactSection = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <h4 className="font-semibold text-foreground">Currently Available</h4>
+                  <h4 className="font-semibold text-foreground font-heading">Currently Available</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  I'm actively looking for new opportunities and projects. 
+                <p className="text-muted-foreground text-sm font-body">
+                  I'm looking for new opportunities and projects. 
                   Response time is typically within 48 hours.
                 </p>
               </CardContent>
