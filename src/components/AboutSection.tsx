@@ -49,7 +49,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-surface">
+    <section id="about" className="py-20 bg-card">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -74,7 +74,7 @@ const AboutSection = () => {
                     alt="Arthur Granja - AI Research & Development"
                     className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
                   />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent-success rounded-full border-4 border-background flex items-center justify-center">
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-background flex items-center justify-center">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const AboutSection = () => {
 
               {/* Contact CTA */}
               <div className="mt-8 pt-6 border-t border-border">
-                <Button className="w-full" size="lg">
+                <Button className="btn-primary w-full" size="lg">
                   Let's Work Together
                 </Button>
               </div>

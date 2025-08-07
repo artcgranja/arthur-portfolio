@@ -27,7 +27,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-surface">
+    <section id="contact" className="py-20 bg-card">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button className="w-full" size="lg">
+              <Button className="btn-primary w-full" size="lg">
                 <Send className="mr-2 h-4 w-4" />
                 Send Message
               </Button>
@@ -143,10 +143,10 @@ const ContactSection = () => {
             </div>
 
             {/* Availability Status */}
-            <Card className="bg-accent-primary/10 border-accent-primary/20">
+            <Card className="bg-primary/10 border-primary/20">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-accent-success rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                   <h4 className="font-semibold text-foreground">Currently Available</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">

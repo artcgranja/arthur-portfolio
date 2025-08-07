@@ -6,7 +6,7 @@ const FeaturedProjects = () => {
     {
       id: 'energy-invoice-automation',
       title: 'Energy Invoice Automation',
-      description: 'AI-powered workflow for extracting and structuring energy invoice data from any format.',
+      description: 'Developed an AI-based automation workflow using LangChain and LLMs to extract and structure energy invoice data from any format. The system performs semantic interpretation of documents and the extracted data is organized into a structured pipeline ready for analysis.',
       longDescription: 'Developed an AI-based automation workflow using LangChain and LLMs to extract and structure energy invoice data from any format (PDF, image, or text). The system performs semantic interpretation of documents, automatically identifying fields like total value, consumption, dates, and tax information, even with varied layouts. Extracted data is organized into a structured pipeline ready for analysis, dashboard visualization, and internal system integration. This approach eliminated the need for fixed rules or traditional OCR, making the process more robust, scalable, and adaptable to new distributors and formats.',
       image: '/assets/projects/invoice-automation.png',
       technologies: ['Python', 'LangChain', 'LLMs', 'PostgreSQL', 'Docker'],
@@ -41,7 +41,7 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section id="featured-projects" className="py-20 bg-surface">
+    <section id="featured-projects" className="py-20 bg-card">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">

@@ -7,24 +7,24 @@ const SkillsSection = () => {
       title: 'Research & Innovation',
       description: 'Exploring emerging technologies and advanced AI methodologies',
       skills: ['LLM Applications', 'AI Architecture', 'Software Engineering', 'Technology Research', 'Innovation Strategies', 'AI Ethics & Safety'],
-      color: 'text-destructive',
-      bgColor: 'bg-destructive/10'
+      color: 'text-red-500',
+      bgColor: 'bg-red-500/10'
     },
     {
       icon: Code,
       title: 'AI & Data Engineering',
       description: 'Development of custom AI solutions and data-driven automations',
       skills: ['RAG', 'MCP', 'Multi-Agent Systems', 'Generative AI', 'Data Mining', 'Process Automation'],
-      color: 'text-accent-primary',
-      bgColor: 'bg-accent-primary/10'
+      color: 'text-primary',
+      bgColor: 'bg-primary/10'
     },
     {
       icon: Server,
       title: 'Backend Development',
       description: 'Building robust, efficient, and scalable backend services',
       skills: ['Python', 'FastAPI', 'Flask', 'Django', 'REST APIs', 'Microservices', 'Docker'],
-      color: 'text-accent-success',
-      bgColor: 'bg-accent-success/10'
+      color: 'text-green-500',
+      bgColor: 'bg-green-500/10'
     },
     {
       icon: Cloud,
@@ -39,16 +39,16 @@ const SkillsSection = () => {
       title: 'Database & Infrastructure',
       description: 'Designing and managing scalable data solutions',
       skills: ['SQL', 'NoSQL', 'Vector Databases', 'PgVector', 'Cloud Infrastructure', 'Git & CI/CD'],
-      color: 'text-accent-warning',
-      bgColor: 'bg-accent-warning/10'
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-500/10'
     },
     {
       icon: Monitor,
       title: 'Web Development',
       description: 'Creating intuitive and integrated web solutions',
       skills: ['TypeScript', 'JavaScript', 'React.js', 'System Integration', 'API Integration', 'Java'],
-      color: 'text-accent-secondary',
-      bgColor: 'bg-accent-secondary/10'
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-500/10'
     }
   ];
 

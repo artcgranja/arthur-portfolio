@@ -24,27 +24,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				surface: 'hsl(var(--surface))',
-				
-				// Enhanced color palette from design system
-				'text-primary': 'hsl(var(--text-primary))',
-				'text-secondary': 'hsl(var(--text-secondary))',
-				'text-tertiary': 'hsl(var(--text-tertiary))',
-				
-				'primary-900': 'hsl(var(--primary-900))',
-				'primary-700': 'hsl(var(--primary-700))',
-				'primary-500': 'hsl(var(--primary-500))',
-				'primary-300': 'hsl(var(--primary-300))',
-				'primary-100': 'hsl(var(--primary-100))',
-				
-				'accent-primary': 'hsl(var(--accent-primary))',
-				'accent-secondary': 'hsl(var(--accent-secondary))',
-				'accent-success': 'hsl(var(--accent-success))',
-				'accent-warning': 'hsl(var(--accent-warning))',
 				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',

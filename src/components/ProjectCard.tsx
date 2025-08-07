@@ -35,7 +35,7 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-primary-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
           {project.liveUrl && (
             <Button size="sm" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} live demo`}>
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, variant = 'default' }: ProjectCardProps) => {
         </div>
         {project.featured && (
           <div className="absolute top-3 right-3">
-            <Badge className="bg-accent-primary text-white">Featured</Badge>
+            <Badge className="bg-primary text-white">Featured</Badge>
           </div>
         )}
       </div>
