@@ -6,7 +6,7 @@ const SkillsSection = () => {
       icon: Lightbulb,
       title: 'Research & Innovation',
       description: 'Exploring emerging technologies and advanced AI methodologies',
-      skills: ['LLM Applications', 'AI Architecture', 'Software Engineering', 'Technology Research', 'Innovation Strategies', 'AI Ethics & Safety'],
+      skills: ['LLM Applications', 'AI Architecture', 'Software Engineering', 'Technology Research', 'AI Ethics & Safety'],
       color: 'text-primary',
       bgColor: 'bg-primary/10'
     },
